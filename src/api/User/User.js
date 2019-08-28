@@ -28,14 +28,12 @@ export default {
         const exists = await prisma.$exists.user({
           AND: [{ id: user.id }, { following_some: { id: parentId } }]
         });
-        console.log(exists);
         if (exists) {
           return true;
         } else {
           return false;
         }
       } catch (error) {
-        console.log(error);
         return false;
       }
     },
