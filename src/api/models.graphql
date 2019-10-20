@@ -18,6 +18,7 @@ type User {
   comments: [Comment!]!
   isLiked: Boolean!
   rooms: [Room!]!
+  postsCount: Int!
   loginSecret: String
   createdAt: String
   updatedAt: String
